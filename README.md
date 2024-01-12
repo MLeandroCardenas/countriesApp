@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## instalar boostrap
 `npm install bootstrap jquery @popperjs/core --save`
+
+## api a consumir para obtener informacion de los paises
+[https://restcountries.com/](https://restcountries.com/)
