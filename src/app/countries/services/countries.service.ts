@@ -10,6 +10,13 @@ export class CountriesService {
 
     constructor(private http: HttpClient) { }
 
+    public searchCountryById(id: string): Observable<Country[]> {
+        return this.http.get<Country[]>(`${ this.apiUrl }/alpha/${ id }`)
+        .pipe( 
+            catchError( () => of([]) )
+         );
+    }
+
     public searchCapital( term: string ):Observable<Country[]>  {
         return this.http.get<Country[]>(`${ this.apiUrl }/capital/${ term }`)
         .pipe( 
